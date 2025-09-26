@@ -1,5 +1,10 @@
 import Home from "./home";
+import { Suspense } from "react";
 
-export default async function Page() {
-  return <Home />;
+export default function Page() {
+  return (
+    <Suspense fallback={null}>
+      <Home />
+    </Suspense>
+  );
 }
